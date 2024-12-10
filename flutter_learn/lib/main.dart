@@ -35,51 +35,38 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrNames = ['Amit', 'Avi', "Pranta", 'James', 'Tomal', 'Pritom'];
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          //reverse: true,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "One",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Two",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Three",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Four",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Five",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-              ),
-            )
-          ],
+        body: ListView.builder(
+          itemBuilder: (context, index) {
+            return Text(
+              arrNames[index],
+              style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+            );
+          },
+          itemCount: arrNames.length,
+          itemExtent: 200,
+          scrollDirection: Axis.vertical,
         ));
   }
 }
+
+// ListView.separated(
+//             itemBuilder: (context, index) {
+//               return Text(
+//                 arrNames[index],
+//                 style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+//               );
+//             },
+//             separatorBuilder: (context, index) {
+//               return Divider(
+//                 height: 200,
+//                 thickness: 5,
+//               );
+//             },
+//             itemCount: arrNames.length)
