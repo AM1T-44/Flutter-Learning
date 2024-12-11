@@ -35,38 +35,36 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = ['Amit', 'Avi', "Pranta", 'James', 'Tomal', 'Pritom'];
-
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: ListView.builder(
-          itemBuilder: (context, index) {
-            return Text(
-              arrNames[index],
-              style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-            );
-          },
-          itemCount: arrNames.length,
-          itemExtent: 200,
-          scrollDirection: Axis.vertical,
-        ));
+
+        // Decoration in Container
+
+        body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            color: const Color.fromARGB(255, 158, 202, 239),
+            child: Center(
+              child: Container(
+                width: 200,
+                height: 200,
+                // decoration
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 113, 165, 255),
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  border: Border.all(width: 3, color: Colors.black12),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 10,
+                        spreadRadius: 10,
+                        color: Colors.blue.shade50)
+                  ],
+                  //shape: BoxShape.circle
+                ),
+              ),
+            )));
   }
 }
-
-// ListView.separated(
-//             itemBuilder: (context, index) {
-//               return Text(
-//                 arrNames[index],
-//                 style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
-//               );
-//             },
-//             separatorBuilder: (context, index) {
-//               return Divider(
-//                 height: 200,
-//                 thickness: 5,
-//               );
-//             },
-//             itemCount: arrNames.length)
