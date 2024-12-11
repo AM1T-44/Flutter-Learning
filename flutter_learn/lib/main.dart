@@ -43,28 +43,36 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // Decoration in Container
 
-        body: Container(
-            height: double.infinity,
-            width: double.infinity,
-            color: const Color.fromARGB(255, 158, 202, 239),
-            child: Center(
+        body: Row(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 50,
+              height: 100,
+              color: Colors.blue.shade600,
+            ),
+            Expanded(
+              //flex: 2,
               child: Container(
-                width: 200,
-                height: 200,
-                // decoration
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 113, 165, 255),
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  border: Border.all(width: 3, color: Colors.black12),
-                  boxShadow: [
-                    BoxShadow(
-                        blurRadius: 10,
-                        spreadRadius: 10,
-                        color: Colors.blue.shade50)
-                  ],
-                  //shape: BoxShape.circle
-                ),
+                width: 50,
+                height: 100,
+                color: Colors.red.shade400,
               ),
-            )));
+            ),
+            Expanded(
+              //flex: 4,
+              child: Container(
+                width: 50,
+                height: 100,
+                color: Colors.orange.shade400,
+              ),
+            ),
+            Container(
+              width: 50,
+              height: 100,
+              color: Colors.blue.shade600,
+            ),
+          ],
+        ));
   }
 }
