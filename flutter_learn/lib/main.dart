@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -43,36 +42,35 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // Decoration in Container
 
-        body: Row(
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 50,
-              height: 100,
-              color: Colors.blue.shade600,
-            ),
-            Expanded(
-              //flex: 2,
-              child: Container(
-                width: 50,
-                height: 100,
-                color: Colors.red.shade400,
+        body: Container(
+          color: Colors.red.shade400,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.amber.shade400,
+                margin: EdgeInsets.only(top: 10, bottom: 10, right: 10),
+                padding: EdgeInsets.all(10),
+                child: Container(
+                  color: Colors.cyan,
+                ),
               ),
-            ),
-            Expanded(
-              //flex: 4,
-              child: Container(
-                width: 50,
-                height: 100,
-                color: Colors.orange.shade400,
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.amber,
+                margin: EdgeInsets.only(top: 10, bottom: 10, right: 10),
               ),
-            ),
-            Container(
-              width: 50,
-              height: 100,
-              color: Colors.blue.shade600,
-            ),
-          ],
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.amber,
+                //margin: EdgeInsets.only(top: 10, bottom: 10),
+              )
+            ],
+          ),
         ));
   }
 }
