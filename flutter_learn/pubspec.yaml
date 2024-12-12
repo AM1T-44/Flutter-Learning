@@ -80,9 +80,9 @@ flutter:
         - asset: assets/fonts/PlaywriteTZGuides-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+    - family: FontMain2
+      fonts:
+        - asset: assets\fonts\PlaywriteHRLijevaGuides-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
