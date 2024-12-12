@@ -34,6 +34,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrNames = ["Amit", "Avi", "Pranta", "Sayanto", "Tanzil", 'Mahmud'];
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -42,35 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // Decoration in Container
 
-        body: Container(
-          color: Colors.red.shade400,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.amber.shade400,
-                margin: EdgeInsets.only(top: 10, bottom: 10, right: 10),
-                padding: EdgeInsets.all(10),
-                child: Container(
-                  color: Colors.cyan,
-                ),
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.amber,
-                margin: EdgeInsets.only(top: 10, bottom: 10, right: 10),
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.amber,
-                //margin: EdgeInsets.only(top: 10, bottom: 10),
-              )
-            ],
-          ),
+        body: Text(
+          "hello, world!",
+          style: TextStyle(
+              fontFamily: 'FontMain',
+              fontSize: 50,
+              fontWeight: FontWeight.w600),
         ));
   }
 }
